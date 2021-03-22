@@ -1,6 +1,52 @@
-import React from 'react';
+import React, {
+    Component
+} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import {
+    BrowserRouter as Router, // we are aliasing this module for a cleaner call
+    Route,
+    Link
+    // etc.
+} from 'react-router-dom';
+
+import Navbar from 'react-bootstrap/Navbar';
+import * as ReactBootStrap from "react-bootstrap";
+
+<
+Navbar bg = "light"
+expand = "lg" >
+    <
+    Navbar.Brand href = "#home" > React - Bootstrap < /Navbar.Brand> <
+    Navbar.Toggle aria  controls = "basic-navbar-nav" / >
+    <
+    Navbar.Collapse id = "basic-navbar-nav" >
+    <
+    ReactBootStrap.Nav className = "mr-auto" >
+    <
+    ReactBootStrap.Nav.Link href = "#home" > Home < /ReactBootStrap.Nav.Link> <
+    ReactBootStrap.Nav.Link href = "#link" > Link < /ReactBootStrap.Nav.Link> <
+    ReactBootStrap.NavDropdown title = "Dropdown"
+id = "basic-nav-dropdown" >
+    <
+    ReactBootStrap.NavDropdown.Item href = "#action/3.1" > Action < /ReactBootStrap.NavDropdown.Item> <
+    ReactBootStrap.NavDropdown.Item href = "#action/3.2" > Another action < /ReactBootStrap.NavDropdown.Item> <
+    ReactBootStrap.NavDropdown.Item href = "#action/3.3" > Something < /ReactBootStrap.NavDropdown.Item> <
+    ReactBootStrap.NavDropdown.Divider / >
+    <
+    ReactBootStrap.NavDropdown.Item href = "#action/3.4" > Separated link < /ReactBootStrap.NavDropdown.Item> <
+    /ReactBootStrap.NavDropdown > <
+    /ReactBootStrap.Nav> <
+    ReactBootStrap.Form inline >
+    <
+    ReactBootStrap.FormControl type = "text"
+placeholder = "Search"
+className = "mr-sm-2" / >
+    <
+    ReactBootStrap.Button variant = "outline-success" > Search < /ReactBootStrap.Button> <
+    /ReactBootStrap.Form> <
+    /Navbar.Collapse> <
+    /Navbar>
 
 
 function Square(props) {
@@ -55,8 +101,8 @@ class Board extends React.Component {
             } {
                 this.renderSquare(8)
             } <
-            /div> <
-            /div>
+            /div> < /
+            div >
         );
     }
 }
@@ -115,8 +161,8 @@ class Game extends React.Component {
                     () => this.jumpTo(move)
                 } > {
                     desc
-                } < /button> <
-                /li>
+                } < /button> < /
+                li >
             );
         });
 
@@ -138,8 +184,8 @@ class Game extends React.Component {
             onClick = {
                 i => this.handleClick(i)
             }
-            /> <
-            /div> <
+            /> < /
+            div > <
             div className = "game-info" >
             <
             div > {
@@ -147,8 +193,8 @@ class Game extends React.Component {
             } < /div> <
             ol > {
                 moves
-            } < /ol> <
-            /div> <
+            } < /ol> < /
+            div > <
             /div>
         );
     }
